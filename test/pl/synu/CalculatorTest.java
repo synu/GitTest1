@@ -2,6 +2,7 @@ package pl.synu;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -12,6 +13,11 @@ public class CalculatorTest {
 	@BeforeClass
 	public static void init(){
 		calc = new Calculator();
+	}
+	
+	@AfterClass
+	public static void destroy(){
+		calc = null;
 	}
 
 	@Test
