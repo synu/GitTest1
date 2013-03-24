@@ -1,0 +1,133 @@
+[33mcommit b43be20ecf4ed3a46c546f7a4965a8dcd55a3c5f[m
+Author: synu <synu@wp.eu>
+Date:   Sun Mar 24 23:19:24 2013 +0100
+
+    Repository init commit.
+
+[1mdiff --git a/.classpath b/.classpath[m
+[1mnew file mode 100644[m
+[1mindex 0000000..55547bd[m
+[1m--- /dev/null[m
+[1m+++ b/.classpath[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<classpath>[m
+[32m+[m	[32m<classpathentry kind="src" path="src"/>[m
+[32m+[m	[32m<classpathentry kind="src" path="test"/>[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>[m
+[32m+[m	[32m<classpathentry kind="output" path="bin"/>[m
+[32m+[m[32m</classpath>[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7447f89[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m/bin[m
+\ No newline at end of file[m
+[1mdiff --git a/.project b/.project[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3e76c49[m
+[1m--- /dev/null[m
+[1m+++ b/.project[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<projectDescription>[m
+[32m+[m	[32m<name>GitTest1</name>[m
+[32m+[m	[32m<comment></comment>[m
+[32m+[m	[32m<projects>[m
+[32m+[m	[32m</projects>[m
+[32m+[m	[32m<buildSpec>[m
+[32m+[m		[32m<buildCommand>[m
+[32m+[m			[32m<name>org.eclipse.jdt.core.javabuilder</name>[m
+[32m+[m			[32m<arguments>[m
+[32m+[m			[32m</arguments>[m
+[32m+[m		[32m</buildCommand>[m
+[32m+[m	[32m</buildSpec>[m
+[32m+[m	[32m<natures>[m
+[32m+[m		[32m<nature>org.eclipse.jdt.core.javanature</nature>[m
+[32m+[m	[32m</natures>[m
+[32m+[m[32m</projectDescription>[m
+[1mdiff --git a/.settings/org.eclipse.jdt.core.prefs b/.settings/org.eclipse.jdt.core.prefs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7341ab1[m
+[1m--- /dev/null[m
+[1m+++ b/.settings/org.eclipse.jdt.core.prefs[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32meclipse.preferences.version=1[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.compliance=1.7[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.lineNumber=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.localVariable=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.sourceFile=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.assertIdentifier=error[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.enumIdentifier=error[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.source=1.7[m
+[1mdiff --git a/src/pl/synu/Calculator.java b/src/pl/synu/Calculator.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0813904[m
+[1m--- /dev/null[m
+[1m+++ b/src/pl/synu/Calculator.java[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32mpackage pl.synu;[m
+[32m+[m
+[32m+[m[32mpublic class Calculator {[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic Calculator() {[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic int multiply(int a, int b){[m
+[32m+[m		[32mreturn a*b;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic double divide(int a, int b){[m
+[32m+[m		[32mreturn a/b;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic static void main(String[] args){[m
+[32m+[m		[32mnew Calculator();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/test/pl/synu/CalculatorTest.java b/test/pl/synu/CalculatorTest.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2774d02[m
+[1m--- /dev/null[m
+[1m+++ b/test/pl/synu/CalculatorTest.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage pl.synu;[m
+[32m+[m
+[32m+[m[32mimport static org.junit.Assert.assertEquals;[m
+[32m+[m
+[32m+[m[32mimport org.junit.BeforeClass;[m
+[32m+[m[32mimport org.junit.Test;[m
+[32m+[m
+[32m+[m[32mpublic class CalculatorTest {[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate static Calculator calc;[m
+[32m+[m[41m	[m
+[32m+[m	[32m@BeforeClass[m
+[32m+[m	[32mpublic static void init(){[m
+[32m+[m		[32mcalc = new Calculator();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32m@Test[m
+[32m+[m	[32mpublic void testMultiply(){[m
+[32m+[m		[32mint a = 10;[m
+[32m+[m		[32mint b = 4;[m
+[32m+[m		[32mint result = calc.multiply(a, b);[m
+[32m+[m		[32massertEquals(40, result);[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32m@Test[m
+[32m+[m	[32mpublic void testDivide(){[m
+[32m+[m		[32mint a = 20;[m
+[32m+[m		[32mint b = 5;[m
+[32m+[m		[32mdouble result = calc.divide(a, b);[m
+[32m+[m		[32massertEquals(4, result, 0);[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
